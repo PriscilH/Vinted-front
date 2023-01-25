@@ -1,8 +1,264 @@
-
-.Menunav{
-    display: flex;
+.Logo {
+    width: 80px;
+    padding-top: 5px;
+    margin-left: 100px;
 }
 
-.Menunav div {
+.Header {
+    padding: 15px;
+}
+
+.Header input {
+    width: 600px;
+    height: 35px;
+    background-color: #f5f6f7;
+    border: none;
+    padding-left: 20px;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+.Connexion {
     display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+}
+
+.Buttons button {
+   padding: 5px;
+   font-size: 14px;
+   border: 1px solid #017580;
+}
+
+.Buttons button:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 0px;
+}
+
+.Buttons button:nth-child(2) {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 5px;
+}
+
+.Buttons button:not(:last-child) {
+background-color: #fff;
+color: #017580;
+
+}
+
+.Buttons button:last-child{
+background-color: #017580;
+color: #fff;
+margin-right: 50px;
+margin-left: 10px;
+border-radius: 5px;
+}
+
+/* .Buttons:last-child {
+    
+} */
+
+nav {
+    margin-top: 10px;
+    margin-left: 100px;
+    /* margin-bottom: 10px; */
+}
+
+nav  button:not(:first-child) {
+    margin-left: 20px;
+}
+
+nav button{
+    background-color: white;
+    border: none;
+    font-size: 14px;
+    line-height: 18px;
+    color: #757575;
+    font-weight: 500;
+}
+
+nav button:hover{
+    background-color: #FAFAFA;
+   cursor: pointer;
+}
+
+/* HERO */
+
+.Banner {
+    background-image: url("./assets/banner-home.jpeg") ;
+    width: 100vw;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    padding-top: 125px;
+    /* position: relative; */
+    /* object-fit: cover;
+    width: 1500px;
+    height: 470px; */
+}
+
+.Bannertorn {
+    margin-top: 250px;
+}
+
+/* HOME */
+
+h3 {
+    margin-left: 100px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 32px;
+    color: #171717;
+}
+
+.offers-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 40px;
+  }
+
+.offer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    
+  }
+
+.offer > img {
+    width: 240px;
+    height: 350px;
+    object-fit: cover;
+  }
+
+.offer > div {
+    padding: 10px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+.offer > div > img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+.Price {
+    font-weight: 600;
+    margin-bottom: -10px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.Taille{
+    margin-bottom: -10px;
+}
+
+.offer p:not(.Price){
+    color: #757575;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+  /* OFFER PAGE */
+
+main {
+    display: flex;
+    background-color: #F2F2F2;
+    justify-content: center;
+    padding: 40px;
+  }
+
+.offer-image {
+    margin-left: 10px;
+    margin-right: 100px;
+    border-radius: 5px;
+    width: 420px;
+    height: 750px;
+    object-fit: cover;
+  }
+
+.offer-details{
+    background-color: #fff;
+    /* height: 750px; */
+    border-radius: 5px;
+    width: 350px;
+    padding: 30px;
+}
+
+.details-line p:last-child{
+    color: #171717;
+    font-weight: 600;
+}
+.details-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    line-height: 19.5px;
+    color: #757575;
+}
+   
+.offer-description{ 
+    margin-top: 40px;
+    border-top: 1px solid lightgray
+}
+  
+
+.offer-description p:first-child{
+    color:#171717;
+    font-weight: 500;
+    margin-top: 73px;
+    
+  }
+
+.offer-description p{
+    color:#4D4D4D;
+    font-size: 16px;
+    line-height: 22px;
+    /* display: flex; */
+  }
+
+.offer-description img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.offer-description div p{
+font-weight: 500;
+color: #171717;
+}
+
+.offer-description div{
+    padding: 10px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.offer-description button{
+    margin-top: 50px;
+    margin-bottom: 15px;
+    width: 350px;
+    height: 35px;
+    border: none;
+    background-color: #017580;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    /* display: flex;
+    justify-content: center; */
+    /* align-items: center; */
 }
