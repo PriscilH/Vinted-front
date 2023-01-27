@@ -3,6 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Offer from "./pages/Offer";
 import Header from "./components/Header";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+library.add(faMagnifyingGlass);
 
 function App() {
   return (
@@ -10,6 +15,8 @@ function App() {
       <Header /> 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/offer/:id" element={<Offer />} />
       </Routes>
     </Router>

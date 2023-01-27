@@ -1,18 +1,26 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Logo from "../assets/logo.png";
-const Header = () => {
-  return (
+import Language from "./Language";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+const Header = () => {
+  const navigate = useNavigate();
+  
+  return (
     <div className="Header">
       <div className="Connexion">
       <Link to="/">
       <img className="Logo" src={Logo} alt="Logo" />
       </Link>
-      <input placeholder="Recherche des articles"></input> 
+      <div className="Glass"><FontAwesomeIcon   icon="fa-solid fa-magnifying-glass" />
+      <input  placeholder="Recherche des articles"></input> </div>
       <div className="Buttons">
-        <button>S'inscrire </button>
-        <button>Se connecter</button>
+        <button onClick={() => navigate("/signup")}>S'inscrire </button>
+        <button onClick={() => navigate("/login")}>Se connecter</button>
         <button>Vends tes articles</button>
+        <button className="Aide">?</button>
+        <Language />
       </div>
       </div>
       <nav>
