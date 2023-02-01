@@ -10,7 +10,7 @@
     padding: 15px;
 }
 
-.Header input {
+.Searchbar {
     width: 600px;
     height: 35px;
     background-color: #f5f6f7;
@@ -27,17 +27,35 @@
     color: #AFAFAF;
 }
 
+.Pricefilter {
+    display: flex;
+    margin-left: 100px;
+    width: 1500px;
+    font-size: 14px;
+}
+
+.Pricefilter p{
+    color: #017580;
+    font-weight: 700;
+}
+.PriceMin {
+    border-radius: 5px;
+    border: 2px solid #017580;
+    width : 50px;
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
 .Connexion {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid lightgray;
 }
 
 .Buttons button{
    padding: 5px;
    font-size: 14px;
    cursor: pointer;
-   
 }
 
 .inscrip {
@@ -66,11 +84,6 @@ border-radius: 5px;
 border: none;
 }
 
-/* .Buttons button:not(:nth-child(3)) {
-background-color: #fff;
-color: #017580;
-} */
-
 .Sell{
 background-color: #017580;
 color: #fff;
@@ -98,11 +111,15 @@ color: #757575 ;
 cursor: pointer;
 }
 
+.Trait {
+    border-bottom: 1px solid lightgray
+}
+
 /* ----NAVIGATION---- */
 
 nav {
     margin-top: 10px;
-    margin-left: 100px;
+    margin-left: 94px; 
 }
 
 nav  button:not(:first-child) {

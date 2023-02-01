@@ -23,7 +23,7 @@ const Header = ({token, transferToken, priceMin, setPriceMin, title, setTitle}) 
       <img className="Logo" src={Logo} alt="Logo" />
       </Link>
       <div className="Glass"><FontAwesomeIcon   icon="fa-solid fa-magnifying-glass" />
-      <input
+      <input className="Searchbar"
         placeholder="Recherche des articles"
         type="text"
         onChange={(event) => {
@@ -33,12 +33,6 @@ const Header = ({token, transferToken, priceMin, setPriceMin, title, setTitle}) 
       
       </div>
       
-      <input className="PriceMin"
-        type="number"
-        onChange={(event) => {
-          setPriceMin(event.target.value);
-        }}
-      />
       <div className="Buttons">
       {/* On peut utiliser navigate pour naviguer sur les pages souhaitées
         <button onClick={() => navigate("/signup")}>S'inscrire </button>
@@ -58,8 +52,18 @@ const Header = ({token, transferToken, priceMin, setPriceMin, title, setTitle}) 
         <button className="Aide">?</button>
         <Language />
       </div>
-      
       </div>
+      <div className="Pricefilter">
+      <p>Prix Min :</p>
+      <input className="PriceMin"
+      // placeholder="Prix min"
+        type="number"
+        onChange={(event) => {
+          setPriceMin(event.target.value);
+        }}
+      />
+      </div>
+      <div className="Trait"></div>
       <nav>
         <button><span>Femmes</span></button>
         <button><span>Hommes</span></button>
