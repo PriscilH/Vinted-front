@@ -17,6 +17,7 @@
     border: none;
     padding-left: 20px;
     font-size: 18px;
+    outline: none;
   }
 
 .Glass {
@@ -32,37 +33,50 @@
     border-bottom: 1px solid lightgray;
 }
 
-.Buttons button {
+.Buttons button{
    padding: 5px;
    font-size: 14px;
-   border: 1px solid #017580;
    cursor: pointer;
+   
 }
 
-.Buttons button:first-child {
+.inscrip {
     border-top-left-radius: 5px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 0px;
+    background-color: #fff;
+    color: #017580;
+    border: 1px solid #017580;
 }
 
-.Buttons button:nth-child(2) {
+.connect {
     border-top-left-radius: 0px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 5px;
+    background-color: #fff;
+    color: #017580;
+    border: 1px solid #017580;
+} 
+
+.Redbutton {
+background-color: lightcoral;
+border-radius: 5px;
+border: none;
 }
 
-.Buttons button:not(:nth-child(3)) {
+/* .Buttons button:not(:nth-child(3)) {
 background-color: #fff;
 color: #017580;
-}
+} */
 
-.Buttons button:nth-child(3){
+.Sell{
 background-color: #017580;
 color: #fff;
 margin-left: 10px;
 border-radius: 5px;
+border: none;
 }
 
 .Aide{
@@ -70,6 +84,9 @@ border-radius: 5px;
     margin-left: 10px;
     margin-right: 20px;
     width: 27px;
+    background-color: #fff;
+    color: #017580;
+    border: 1px solid #017580;
 }
 
 .Langues{
@@ -103,7 +120,7 @@ nav button{
 
 nav button:hover{
     background-color: #FAFAFA;
-   cursor: pointer;
+    cursor: pointer;
 }
 
 /* HERO */
@@ -294,6 +311,7 @@ h1 {
     width: 350px;
     margin-bottom: 20px;
     padding: 10px;
+    outline: none;
   }
 
 .input-text2::placeholder {
@@ -366,3 +384,4 @@ a {
 .Logbutton {
     margin-top: 50px;
 }
+

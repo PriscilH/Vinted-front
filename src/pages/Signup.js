@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 
-const Signup = () => {
+const Signup = ({transferToken}) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -67,6 +67,7 @@ const Signup = () => {
                     }}
                   ></input>S'inscrire à notre newsletter
                 </div>
+                {/* On pouvais mettre la phrase dans un Label et enfermé le tout dans une div */}
                 <div>
                   <span className="span-letter">
                     En m'inscrivant je confirme avoir lu et accepté 
@@ -84,7 +85,8 @@ const Signup = () => {
               if (!username || !email || !password) {
                 alert(`Merci de compléter les informations manquantes`);
               } else {
-                const data = async () => {
+                const data = async (event) => {
+                  event.preventDefault();
                   const formdata = new FormData();
                   formdata.append("username", username);
                   formdata.append("email", email);

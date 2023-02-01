@@ -3,12 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Login = ({ transferToken }) => {
-  // MES USESTATE
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [infos, setInfos] = useState(false);
 
-  // MES VARIABLES
+  
   const navigate = useNavigate();
   function refreshPage() {
     window.location.reload(false);
@@ -61,7 +60,11 @@ const Login = ({ transferToken }) => {
                           }
                         );
                         const token = response.data.token;
+                        // Appel de la fonction récupéré en props
                         transferToken(token);
+                        // -- SANS l'utilisation de la fonction transferToken
+                        // Cookies.set("token", data.token, { expires: 1, sameSite: "strict" });
+                        // setToken(data.token);
                         navigate("/");
                       } catch (error) {
                         console.log(error.message);

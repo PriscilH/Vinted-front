@@ -1,25 +1,39 @@
 import { Link } from "react-router-dom";
-// import banner from "../assets/banner-home.jpeg";
 import dechire from "../assets/dechire.svg"
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const Home = () => {
+const Home = ({ title, setTitle, priceMin, setPriceMin }) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
+
+useEffect(() => {
     const fetchData = async () => {
+      let filters = "";
+      if (title) {
+        filters = filters + "?title=" + title;
+      }
+      if (priceMin) {
+        if (filters) {
+          // si il y a déjà un filtre par title, donc filters n'est plus une string vide et contient déjà un `?`, il me faut donc un `&`
+          filters = filters + "&priceMin=" + priceMin;
+        } else {
+          // si il n'y a pas de filtre title, alors la variable filters est toujours vide, et donc il me faut un `?`
+          filters = filters + "?priceMin=" + priceMin;
+        }
+      }
         const response = await axios.get(
-          "https://lereacteur-vinted-api.herokuapp.com/offers"
+          "https://lereacteur-vinted-api.herokuapp.com/offers" + filters
         );
         // console.log(response.data);
         setData(response.data);
         setIsLoading(false);
     };
 
-    useEffect(() => {
+    
     fetchData();
-  }, []);
+  }, [title, priceMin]);
 
   return isLoading ? (
     <span>Loading ...</span>
