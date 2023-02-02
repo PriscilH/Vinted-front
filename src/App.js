@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import Offer from "./pages/Offer";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import Publish from "./pages/Publish";
 
 // Import FontAwesome pour les icons
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -48,6 +49,7 @@ function App() {
         <Route path="/signup" element={<Signup transferToken={transferToken} token={token}/>} />
         <Route path="/login" element={<Login transferToken={transferToken} token={token} />} />
         <Route path="/offer/:id" element={<Offer />} />
+        <Route path="/publish" element={token ? <Publish token={token} /> : <Signup />} />
       </Routes>
     </Router>
   );

@@ -48,7 +48,7 @@ const Header = ({token, transferToken, priceMin, setPriceMin, title, setTitle}) 
           transferToken(null);
         }}>Déconnexion
         </button> )}
-        <button className="Sell" >Vends tes articles</button>
+        <Link to="/Publish"><button className="Sell" >Vends tes articles</button></Link>
         <button className="Aide">?</button>
         <Language />
       </div>
