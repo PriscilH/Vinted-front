@@ -42,7 +42,7 @@ class Basic extends Component {
             <section>
               <div {...getRootProps({ className: "dropzone" })}>
                 <input {...getInputProps()} />
-                <button>Ajoute une photo</button>
+                <button className="Photo">Ajoute une photo</button>
               </div>
               <aside>
                 <p>{image && image.name} </p>
@@ -168,8 +168,8 @@ class Basic extends Component {
               <div className="settings-offer-2">
                 <div className="invisible"> </div>
                 <div>
-                  <input className="checkmark" type="checkbox"></input> Je suis
-                  intéréssé(e) par les échanges
+                  <input className="checkmark" type="checkbox"></input> 
+                  <p className="swap">Je suis intéréssé(e) par les échanges</p>
                 </div>
               </div>
             </div>
