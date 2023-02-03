@@ -60,11 +60,11 @@ useEffect(() => {
           >
               <div className="offer">
               {element.owner.account.avatar && (
-                  <img 
+                  <img className="avatar"
                   src={element.owner.account.avatar.secure_url}
                   alt="Vendeur du vêtement"/>
                   )}
-                  <p>{element.owner.account.username}</p> 
+                  <p className="username">{element.owner.account.username}</p> 
                 
                 
                 <img 
