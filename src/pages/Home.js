@@ -31,7 +31,6 @@ useEffect(() => {
         setIsLoading(false);
     };
 
-    
     fetchData();
   }, [title, priceMin]);
 
@@ -50,6 +49,8 @@ useEffect(() => {
           {data.offers.map((element, index) => {
             console.log("element =>", element.owner);
             return (
+              <div key={element._id}> 
+              {element.owner && (
               <Link
             // to={"/offer/" + offer._id}
             to={`/offer/${element._id}`}
@@ -58,12 +59,14 @@ useEffect(() => {
             style={{ textDecoration: "none", color: "black" }}
           >
               <div className="offer">
-                <div>
+              {element.owner.account.avatar && (
                   <img 
                   src={element.owner.account.avatar.secure_url}
                   alt="Vendeur du vêtement"/>
+                  )}
                   <p>{element.owner.account.username}</p> 
-                </div>
+                
+                
                 <img 
                     src={element.product_image.secure_url}
                     alt="aperçu du vêtement" 
@@ -76,7 +79,8 @@ useEffect(() => {
                       return element.MARQUE && <p className="Marque" key={index}>{element.MARQUE}</p>
                      })}
                 </div>
-                </Link>
+                </Link>)}
+              </div>
             );
           })};
       </div>

@@ -403,89 +403,36 @@ a {
 }
 
 /* ---PAGE-PUBLISH--- */
+ h2 {
+    padding-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    
+  } 
 
 .master-2 {
     min-height: 130vh;
     background: rgb(208, 208, 208);
     background: linear-gradient(
       180deg,
-      rgba(208, 208, 208, 1) 66%,
+      #F2F2F2 66%,
       rgba(254, 254, 254, 1) 100%,
       rgba(255, 255, 255, 1) 100%
+      
     );
-  }
-  
-  .block-publish {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-    border: 1px solid rgb(225, 225, 225);
-  }
-  
-  .block-upload {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    background-color: white;
-    padding: 50px;
-    cursor: pointer;
+    
   }
 
-  .button-add-offer {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .input-offer-2 {
-    border-bottom: 1px solid rgb(225, 225, 225);
-    height: 40px;
-    width: 500px;
-    font-size: 20px;
-    margin-bottom: 10px;
-    padding-left: 3px;
-    outline-color: #007782;
-  }
-  
-  .input-offer-descript {
-    border-bottom: 1px solid rgb(225, 225, 225);
-  
-    padding-bottom: 100px;
-    width: 500px;
-    font-size: 20px;
-    margin-bottom: 10px;
-    padding-left: 3px;
-    outline-color: #007782;
-  }
-  
-  .page-selector {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .page-selector > div > button {
-    font-size: 10px;
-    width: 120px;
-    height: 30px;
-  }
-  
-  h2 {
-    padding-top: 30px;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
-  }
-  
-  .input-offer-descript::-webkit-input-placeholder {
-    padding: 2px;
-    opacity: 0.3;
-  }
-  
-  .input-offer-2::-webkit-input-placeholder {
-    padding: 2px;
-    opacity: 0.3;
-  }
-  
-  .block-publish-2 {
+.publish-style {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+}
+
+.block-publish-2 {
     background-color: white;
     height: 165px;
     display: flex;
@@ -506,6 +453,99 @@ a {
     align-items: center;
     font-size: 10px;
   }
+
+.block-publish {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    border: 1px solid rgb(225, 225, 225);
+  }
+  
+.settings-offer {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px;
+  border-bottom: 1px solid rgba(240, 240, 240, 0.602);
+}
+
+.input-offer-descript {
+    border-bottom: 1px solid rgb(225, 225, 225);
+    padding-bottom: 100px;
+    width: 500px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-left: 3px;
+    outline-color: #007782;
+  }
+
+.input-offer-2 {
+    border-bottom: 1px solid rgb(225, 225, 225);
+    height: 40px;
+    width: 500px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-left: 3px;
+    outline-color: #007782;
+  }
+
+.settings-offer-2 {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  padding: 10px;
+  height: 35px;
+}
+
+.invisible {
+  width: 100px;
+}
+
+/* .checkmark {
+    accent-color: #007782;
+  } */
+
+.button-add-offer {
+    display: flex;
+    justify-content: flex-end;
+  } 
+
+
+
+
+  
+  /* .block-upload {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    padding: 50px;
+    cursor: pointer;
+  } */
+
+  
+
+  /* .page-selector {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .page-selector > div > button {
+    font-size: 10px;
+    width: 120px;
+    height: 30px;
+  }
+  
+  .input-offer-descript::-webkit-input-placeholder {
+    padding: 2px;
+    opacity: 0.3;
+  }
+  
+  .input-offer-2::-webkit-input-placeholder {
+    padding: 2px;
+    opacity: 0.3;
+  }
   
   .master-3 {
     min-height: 80vh;
@@ -519,4 +559,4 @@ a {
       rgba(254, 254, 254, 1) 100%,
       rgba(255, 255, 255, 1) 100%
     );
-  }
+  } */
