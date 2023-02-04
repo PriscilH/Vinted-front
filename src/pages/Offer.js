@@ -49,9 +49,11 @@ const Offer = () => {
                 <p>{offerDetails.product_name}</p>
                 <p>{offerDetails.product_description}</p>
                 <div>
+                {offerDetails.owner.account.avatar && (
                   <img 
                   src={offerDetails.owner.account.avatar.secure_url}
                   alt="Vendeur du vêtement"/>
+                  )}
                   <p>{offerDetails.owner.account.username}</p> 
                 </div>
                 <button>Acheter</button>

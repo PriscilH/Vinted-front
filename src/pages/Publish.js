@@ -59,11 +59,11 @@ class Basic extends Component {
 
   if (token) {
     return (
-      <div className="master-2">
-        <div className="publish-style">
+      <div className="Part-2">
+        <div className="Publish-style">
           <h2>Vends ton article</h2>
           <div>
-            <div className="block-publish-2">
+            <div className="Block-publish2">
               <div className="dropbox">
                 <Basic />
               </div>
@@ -72,10 +72,10 @@ class Basic extends Component {
               <div className="settings-offer">
                 <div>Titre</div>
                 <input
-                  className="input-offer-2"
+                  className="input-offer2"
                   onChange={(title) => setTitle(title.target.value)}
                   type="text"
-                  placeholder="ex : chemise"
+                  placeholder="ex : Pull"
                   name="title"
                   value={title}
                 ></input>
@@ -98,10 +98,10 @@ class Basic extends Component {
               <div className="settings-offer">
                 <div>Marque</div>
                 <input
-                  className="input-offer-2"
+                  className="input-offer2"
                   onChange={(brand) => setBrand(brand.target.value)}
                   type="text"
-                  placeholder="ex : Nike"
+                  placeholder="ex : Mango"
                   name="marque"
                   value={brand}
                 ></input>
@@ -109,10 +109,10 @@ class Basic extends Component {
               <div className="settings-offer">
                 <div>Taille</div>
                 <input
-                  className="input-offer-2"
+                  className="input-offer2"
                   onChange={(size) => setSize(size.target.value)}
                   type="text"
-                  placeholder="ex : chemise"
+                  placeholder="ex : S ou 34"
                   name="taille"
                   value={size}
                 ></input>
@@ -120,10 +120,10 @@ class Basic extends Component {
               <div className="settings-offer">
                 <div>Couleur</div>
                 <input
-                  className="input-offer-2"
+                  className="input-offer2"
                   onChange={(color) => setColor(color.target.value)}
                   type="text"
-                  placeholder="ex : Rouge"
+                  placeholder="ex : Marron"
                   name="couleur"
                   value={color}
                 ></input>
@@ -132,7 +132,7 @@ class Basic extends Component {
                 <div className="settings-offer">
                   <div>Etat</div>
                   <input
-                    className="input-offer-2"
+                    className="input-offer2"
                     onChange={(quality) => setQuality(quality.target.value)}
                     type="text"
                     placeholder="ex : Neuf"
@@ -143,10 +143,10 @@ class Basic extends Component {
                 <div className="settings-offer">
                   <div>Lieu</div>
                   <input
-                    className="input-offer-2"
+                    className="input-offer2"
                     onChange={(city) => setCity(city.target.value)}
                     type="text"
-                    placeholder="ex : Paris"
+                    placeholder="ex : Nantes"
                     name="ville"
                     value={city}
                   ></input>
@@ -157,10 +157,10 @@ class Basic extends Component {
               <div className="settings-offer">
                 <div>Prix</div>
                 <input
-                  className="input-offer-2"
+                  className="input-offer2"
                   onChange={(price) => setPrice(price.target.value)}
                   type="text"
-                  placeholder="ex : 10€"
+                  placeholder="ex : 30€"
                   name="prix"
                   value={price}
                 ></input>

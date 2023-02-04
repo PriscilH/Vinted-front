@@ -410,7 +410,7 @@ a {
     font-weight: 600;
   } 
 
-.master-2 {
+.Part-2 {
     min-height: 130vh;
     background: rgb(208, 208, 208);
     background: linear-gradient(
@@ -421,7 +421,7 @@ a {
     );
   }
 
-.publish-style {
+.Publish-style {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -430,7 +430,7 @@ a {
   font-size: 18px;
 }
 
-.block-publish-2 {
+.Block-publish2 {
     background-color: white;
     height: 165px;
     display: flex;
@@ -463,6 +463,10 @@ a {
   height: 40px;
 }
 
+.Photo, .button-add-offer button:hover{
+  cursor: pointer;
+}
+
 .block-publish {
     display: flex;
     flex-direction: column;
@@ -478,7 +482,7 @@ a {
   border-bottom: 1px solid rgba(240, 240, 240, 0.602);
 }
 
-.input-offer-2 {
+.input-offer2 {
     border-bottom: 1px solid rgb(225, 225, 225);
     height: 40px;
     width: 500px;
