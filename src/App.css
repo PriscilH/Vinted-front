@@ -404,13 +404,8 @@ a {
 }
 
 /* ---PAGE-PUBLISH--- */
- h2 {
-    padding-top: 30px;
-    font-size: 20px;
-    font-weight: 600;
-  } 
 
-.Part-2 {
+.publish{
     min-height: 130vh;
     background: rgb(208, 208, 208);
     background: linear-gradient(
@@ -419,120 +414,124 @@ a {
       rgba(254, 254, 254, 1) 100%,
       rgba(255, 255, 255, 1) 100%
     );
+    padding: 10px 110px 50px 110px;
+  }
+  
+  h2 {
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+  } 
+
+.Block-publish {
+    background-color: white;
+    margin: 20px 0px;
   }
 
-.Publish-style {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 18px;
-}
+.Block-photo{
+    height: 130px;
+  }
 
-.Block-publish2 {
-    background-color: white;
-    height: 165px;
+.publish-file{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
-    border: 1px solid rgb(225, 225, 225);
+  }
+
+.publish-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: dashed 2px #017580;
+    width: 900px;
+    margin-left: 135px;
+    padding: 20px;
   }
   
-.dropbox {
-    border: 2px solid #007782;
-    border-style: dashed;
-    max-height: 70px;
-    padding: 40px;
-    padding-left: 500px;
-    padding-right: 500px;
+.publish-photo > div {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1.5px solid ;
+    background-color: #017580;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+.input-file {
+    display: none;
+  }
+
+.input-publish {
+    width: 50%;
+    outline-color: #007782
+  }
+
+.line-publish {
+    border: 0.1px solid #F2F2F2;
+  }
+  
+.publish section > div {
+    display: flex;
+    padding: 20px;
+  }
+  
+.publish section > div > label {
+    width: 50%;
+    padding: 10px;
+  }
+  
+.checkbox-publish {
     display: flex;
     align-items: center;
-    font-size: 10px;
-  }
-
-.Photo, .button-add-offer button {
-  background-color: #007782;
-  color:#F2F2F2;
-  font-size: medium;
-  font-weight: 600;
-  border-radius: 5px;
-  border: none;
-  width: 150px;
-  height: 40px;
-}
-
-.Photo, .button-add-offer button:hover{
-  cursor: pointer;
-}
-
-.block-publish {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-    border: 1px solid rgb(225, 225, 225);
-  }
-  
-.settings-offer {
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
-  padding: 10px;
-  border-bottom: 1px solid rgba(240, 240, 240, 0.602);
-}
-
-.input-offer2 {
-    border-bottom: 1px solid rgb(225, 225, 225);
-    height: 40px;
-    width: 500px;
-    font-size: 20px;
-    margin-bottom: 10px;
-    padding-left: 3px;
-    outline-color: #007782;
-  }
-
-.input-offer-descript {
-    border-bottom: 1px solid rgb(225, 225, 225);
-    padding-bottom: 100px;
-    width: 500px;
-    font-size: 20px;
-    margin-bottom: 10px;
-    padding-left: 3px;
-    outline-color: #007782;
-  }
-
-.settings-offer-2 {
-  display: flex;
-  justify-content: space-around;
-  background-color: white;
-  padding: 10px;
-  height: 35px;
-}
-
-.invisible {
-  width: 100px;
-}
-
-.checkmark {
-  margin-left: 2px;
-  accent-color: #007782;
+    accent-color: #007782;
   }
 /* La propriété CSS accent-color définit la couleur d'accentuation */
 
-.swap {
-  margin-left: 36px;
-  margin-right: -10px;
-  margin-top: -30px;
+.checkbox-publish input{
+    width: 90px;
+    height: 30px;
+  }
+
+.checkbox-publish label{
+  font-size: 18px;
 }
 
-.button-add-offer {
+.publish input {
+    border: none;
+    border-bottom: 0.1px solid #ddd;
+    opacity: 0.5;
+    font-size: 15px;
+  }
+  
+textarea {
+    border: none;
+    border-bottom: 0.1px solid #ddd;
+    resize: none;
+    opacity: 0.3;
+  }
+  
+.button-publish {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 50px;
-  } 
-
-
+  }
+  
+.button-publish button{
+    padding: 12px;
+    border-radius: 5px;
+    border: 1.5px solid ;
+    background-color: #017580;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 20px;
+    width: 110px;
+  }
+  
+  
+  
+  
 
 
   

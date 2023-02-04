@@ -1,232 +1,222 @@
-import { useNavigate } from "react-router-dom";
-import React, { useState, Component } from "react";
+import { useState } from "react";
+import { Navigate } from "react-router-dom";
 import axios from "axios";
-import Dropzone from "react-dropzone";
+import Cookies from "js-cookie";
 
-const Publish = ({ token }) => {
-    const [title, setTitle] = useState("");
-    const [description, setDescription] = useState("");
-    const [price, setPrice] = useState("");
-    const [quality, setQuality] = useState("");
-    const [city, setCity] = useState("");
-    const [brand, setBrand] = useState("");
-    const [size, setSize] = useState("");
-    const [color, setColor] = useState("");
-    const [image, setImage] = useState();
-    const navigate = useNavigate();
+const Publish = () => {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [brand, setBrand] = useState("");
+  const [size, setSize] = useState("");
+  const [color, setColor] = useState("");
+  const [condition, setCondition] = useState("");
+  const [city, setCity] = useState("");
+  const [price, setPrice] = useState("");
+  const [file, setFile] = useState(null);
+  const [error, setError] = useState("");
 
-/// ----------- DROPBOX FUNCTION ----------- ///
+  const token = Cookies.get("token");
+  console.log(token);
 
-class Basic extends Component {
-    constructor() {
-      super();
-      this.onDrop = (files) => {
-        setImage(files[0]);
-        this.setState({ files });
-      };
-      this.state = {
-        files: [],
-      };
-    }
+  return token ? (
+    <div className="publish">
+      <form
+        className="block"
+        onSubmit={async (event) => {
+          event.preventDefault();
 
-    render() {
-      const files = this.state.files.map((file) => (
-        <p>
-          {file.name} - {file.size} bytes
-        </p>
-      ));
+          const formData = new FormData();
+          formData.append("title", title);
+          formData.append("description", description);
+          formData.append("price", price);
+          formData.append("condition", condition);
+          formData.append("city", city);
+          formData.append("brand", brand);
+          formData.append("size", size);
+          formData.append("color", color);
+          formData.append("picture", file);
 
-      return (
-        <Dropzone onDrop={this.onDrop}>
-          {({ getRootProps, getInputProps }) => (
-            <section>
-              <div {...getRootProps({ className: "dropzone" })}>
-                <input {...getInputProps()} />
-                <button className="Photo">Ajoute une photo</button>
-              </div>
-              <aside>
-                <p>{image && image.name} </p>
-                <ul>{files}</ul>
-              </aside>
-            </section>
-          )}
-        </Dropzone>
-      );
-    }
-  }
+          for (let pair of formData.entries()) {
+            console.log(pair[0] + ", " + pair[1]);
+          }
 
-  /// ----------- CONDITIONNAL RENDERING IF ----------- ///
-
-  if (token) {
-    return (
-      <div className="Part-2">
-        <div className="Publish-style">
-          <h2>Vends ton article</h2>
+          try {
+            const response = await axios.post(
+              "https://lereacteur-vinted-api.herokuapp.com/offer/publish",
+              formData,
+              {
+                headers: {
+                   Authorization: `Bearer ${token}`,
+                  "Content-Type": "multipart/form-data",
+                },
+              }
+            );
+            console.log(response.data);
+          } catch (error) {
+            console.log(error);
+            setError("Vos informations sont incomplètes");
+          }
+        }}
+      >
+        <h2>Vends ton article</h2>
+        <section className="Block-publish">
+          <div className="Block-photo">
+          <div className="publish-photo">
+            <div className="publish-file">
+              <label htmlFor="file"> ✚ Ajoute une photo</label>
+            </div>
+            <input
+              className="input-file"
+              name="file"
+              id="file"
+              type="file"
+              onChange={(event) => {
+                setFile(event.target.files[0]);
+              }}
+            /></div>
+          </div>
+        </section>
+        <section className="Block-publish">
           <div>
-            <div className="Block-publish2">
-              <div className="dropbox">
-                <Basic />
-              </div>
-            </div>
-            <div className="block-publish">
-              <div className="settings-offer">
-                <div>Titre</div>
-                <input
-                  className="input-offer2"
-                  onChange={(title) => setTitle(title.target.value)}
-                  type="text"
-                  placeholder="ex : Pull"
-                  name="title"
-                  value={title}
-                ></input>
-              </div>
-              <div className="settings-offer">
-                <div>Décris ton article</div>
-                <input
-                  className="input-offer-descript"
-                  onChange={(description) =>
-                    setDescription(description.target.value)
-                  }
-                  type="text"
-                  placeholder="ex : article neuf et jamais porté"
-                  name="description"
-                  value={description}
-                ></input>
-              </div>
-            </div>
-            <div className="block-publish">
-              <div className="settings-offer">
-                <div>Marque</div>
-                <input
-                  className="input-offer2"
-                  onChange={(brand) => setBrand(brand.target.value)}
-                  type="text"
-                  placeholder="ex : Mango"
-                  name="marque"
-                  value={brand}
-                ></input>
-              </div>
-              <div className="settings-offer">
-                <div>Taille</div>
-                <input
-                  className="input-offer2"
-                  onChange={(size) => setSize(size.target.value)}
-                  type="text"
-                  placeholder="ex : S ou 34"
-                  name="taille"
-                  value={size}
-                ></input>
-              </div>
-              <div className="settings-offer">
-                <div>Couleur</div>
-                <input
-                  className="input-offer2"
-                  onChange={(color) => setColor(color.target.value)}
-                  type="text"
-                  placeholder="ex : Marron"
-                  name="couleur"
-                  value={color}
-                ></input>
-              </div>
-              <div>
-                <div className="settings-offer">
-                  <div>Etat</div>
-                  <input
-                    className="input-offer2"
-                    onChange={(quality) => setQuality(quality.target.value)}
-                    type="text"
-                    placeholder="ex : Neuf"
-                    name="etat"
-                    value={quality}
-                  ></input>
-                </div>
-                <div className="settings-offer">
-                  <div>Lieu</div>
-                  <input
-                    className="input-offer2"
-                    onChange={(city) => setCity(city.target.value)}
-                    type="text"
-                    placeholder="ex : Nantes"
-                    name="ville"
-                    value={city}
-                  ></input>
-                </div>
-              </div>
-            </div>
-            <div className="block-publish">
-              <div className="settings-offer">
-                <div>Prix</div>
-                <input
-                  className="input-offer2"
-                  onChange={(price) => setPrice(price.target.value)}
-                  type="text"
-                  placeholder="ex : 30€"
-                  name="prix"
-                  value={price}
-                ></input>
-              </div>
-              <div className="settings-offer-2">
-                <div className="invisible"> </div>
-                <div>
-                  <input className="checkmark" type="checkbox"></input> 
-                  <p className="swap">Je suis intéréssé(e) par les échanges</p>
-                </div>
-              </div>
-            </div>
-            <div className="button-add-offer">
-              <div>
-                <button
-                  onClick={() => {
-                    if (title === "" || description === "" || price === "") {
-                      alert(`Vos informations sont incomplètes`);
-                    } else {
-                      const data = async () => {
-                        const formdata = new FormData();
-
-                        formdata.append("name", title);
-                        formdata.append("description", description);
-                        formdata.append("brand", brand);
-                        formdata.append("size", size);
-                        formdata.append("color", color);
-                        formdata.append("quality", quality);
-                        formdata.append("city", city);
-                        formdata.append("price", price);
-                        formdata.append("image", image);
-                        console.log(formdata);
-                        try {
-                          const response = await axios.post(
-                            "https://lereacteur-vinted-api.herokuapp.com/offer/publish",
-                            formdata,
-                            {
-                              headers: {
-                                Authorization: `Bearer ${token}`,
-                              },
-                            }
-                          );
-                          console.log(response.data);
-                          navigate("/Offers");
-                        } catch (error) {
-                          console.log(error.message);
-                        }
-                      };
-                      data();
-                    }
-                  }}
-                >
-                  Ajouter
-                </button>
-              </div>
+            <label htmlFor="title">Titre</label>
+            <input
+              className="input-publish"
+              type="text"
+              name="title"
+              id="title"
+              placeholder="ex: Pantalon"
+              value={title}
+              onChange={(event) => {
+                setTitle(event.target.value);
+              }}
+            />
+          </div>
+          <p className="line-publish"></p>
+          <div>
+            <label htmlFor="description">Décris ton article</label>
+            <textarea
+              className="input-publish"
+              name="description"
+              id="description"
+              rows="5"
+              value={description}
+              placeholder="ex: Article neuf, jamais porté"
+              onChange={(event) => {
+                setDescription(event.target.value);
+              }}
+            ></textarea>
+          </div>
+        </section>
+        <section className="Block-publish">
+          <div>
+            <label htmlFor="brand">Marque</label>
+            <input
+              className="input-publish"
+              type="text"
+              name="brand"
+              id="brand"
+              placeholder="ex: Mango"
+              value={brand}
+              onChange={(event) => {
+                setBrand(event.target.value);
+              }}
+            />
+          </div>
+          <p className="line-publish"></p>
+          <div>
+            <label htmlFor="size">Taille</label>
+            <input
+              className="input-publish"
+              type="text"
+              name="size"
+              id="size"
+              placeholder="ex: S/34"
+              value={size}
+              onChange={(event) => {
+                setSize(event.target.value);
+              }}
+            />
+          </div>
+          <p className="line-publish"></p>
+          <div>
+            <label htmlFor="color">Couleur</label>
+            <input
+              className="input-publish"
+              type="text"
+              name="color"
+              id="color"
+              placeholder="ex: Violet"
+              value={color}
+              onChange={(event) => {
+                setColor(event.target.value);
+              }}
+            />
+          </div>
+          <p className="line-publish"></p>
+          <div>
+            <label htmlFor="condition">Etat</label>
+            <input
+              className="input-publish"
+              type="text"
+              name="condition"
+              id="condition"
+              placeholder="ex: Neuf"
+              value={condition}
+              onChange={(event) => {
+                setCondition(event.target.value);
+              }}
+            />
+          </div>
+          <p className="line-publish"></p>
+          <div>
+            <label htmlFor="city">Lieu</label>
+            <input
+              className="input-publish"
+              type="text"
+              name="city"
+              id="city"
+              placeholder="ex: Nantes"
+              value={city}
+              onChange={(event) => {
+                setCity(event.target.value);
+              }}
+            />
+          </div>
+        </section>
+        <section className="Block-publish">
+          <div>
+            <label htmlFor="price">Prix</label>
+            <input
+              className="input-publish"
+              type="number"
+              name="price"
+              id="price"
+              placeholder="ex: 30 €"
+              value={price}
+              onChange={(event) => {
+                setPrice(event.target.value);
+              }}
+            />
+          </div>
+          <div className="Block-publish">
+            <label></label>
+            <div className="checkbox-publish">
+              <input type="checkbox" id="exchange" name="exchange" />
+              <label htmlFor="exchange">
+                Je suis intéressé(e) par les échanges
+              </label>
             </div>
           </div>
+        </section>
+        <div className="button-publish">
+          <button>Ajouter</button>
         </div>
-      </div>
-    );
-  }
-
-  /// ----------- CONDITIONNAL RENDERING ELSE ----------- ///
-  else {
-    navigate("/signup");
-  }
+        <p>{error}</p>
+      </form>
+    </div>
+  ) : (
+    <Navigate to="/login" state={{ from: "/publish" }} />
+  );
 };
 
 export default Publish;
