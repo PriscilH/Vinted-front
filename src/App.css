@@ -529,10 +529,80 @@ textarea {
     width: 110px;
   }
   
+/* ---PAGE--PAYEMENT--- */
+
+.Payment {
+  background-color: #eaedee;
+  height: 100vh;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
   
-  
-  
+}
+
+.Blockpay {
+  margin: 20px auto;
+  height: max-content;
+  width: 600px;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.Payprice{
+  display: flex;
+  justify-content: flex-end;
+}
 
 
-  
- 
+.Titlepay {
+  color: #a0a0a0;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.Blockpay > div > p {
+  color: #6a6a6a;
+}
+
+#total > p {
+  font-weight: bold;
+  color: black;
+}
+
+.totaltext {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.Blockpay > p > span {
+  font-weight: bold;
+}
+
+.Paycomplete {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.Payinput {
+  border: solid 1px #efefef;
+  border-radius: 2px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.line-payment {
+  border: 0.1px solid rgb(222, 216, 216);
+} 
+
+.Buttonvalid{
+    padding: 12px;
+    border-radius: 5px;
+    border: 1.5px solid ;
+    background-color: #017580;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 20px;
+    width: 110px;
+}
