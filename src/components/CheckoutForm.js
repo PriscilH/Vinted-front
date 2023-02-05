@@ -42,15 +42,15 @@ const CheckoutForm = ({username, title, amount}) => {
         <form className="Paycomplete" onSubmit={handleSubmit}>
             <div className="Payinput">
           <CardElement /></div>
-          <button className="Buttonvalid" type="submit">Valider</button>
+          <button className="Buttonvalid" type="submit">Payer</button>
         </form>
         </div>
       ) : (
         <div>
-        <span>Paiement validé ! </span>
+        <span className="Paycheck">Paiement validé ! </span>
       
       <Link to="/">
-        <button>Retour sur la page d'accueil</button>
+        <button className="Prevhome">Retour sur la page d'accueil</button>
       </Link>
     </div>
   );

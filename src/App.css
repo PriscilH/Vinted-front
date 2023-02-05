@@ -532,12 +532,11 @@ textarea {
 /* ---PAGE--PAYEMENT--- */
 
 .Payment {
-  background-color: #eaedee;
-  height: 100vh;
+  background-color: #f5f6f7;
+  height: 120vh;
   padding-top: 10px;
   display: flex;
   justify-content: center;
-  
 }
 
 .Blockpay {
@@ -545,13 +544,16 @@ textarea {
   height: max-content;
   width: 600px;
   background-color: white;
-  padding: 20px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
+  border-radius: 5px;
 }
+
 .Payprice{
   display: flex;
   justify-content: flex-end;
+  margin-top: -36px;
 }
 
 
@@ -585,7 +587,7 @@ textarea {
 }
 
 .Payinput {
-  border: solid 1px #efefef;
+  border: solid 1px #f5f6f7;
   border-radius: 2px;
   padding: 10px;
   margin-bottom: 20px;
@@ -601,8 +603,28 @@ textarea {
     border: 1.5px solid ;
     background-color: #017580;
     color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    width: 600px;
+    cursor: pointer;
+}
+
+.Prevhome{
+    padding: 12px;
+    border-radius: 5px;
+    border: 1.5px solid ;
+    background-color: #017580;
+    color: #fff;
     font-size: 15px;
     font-weight: 600;
     margin-top: 20px;
-    width: 110px;
+    width: 180px;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+.Paycheck{
+  color: #017580;
+  font-weight: 600;
 }
