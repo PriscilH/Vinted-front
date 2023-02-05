@@ -16,6 +16,7 @@ import Payment from "./pages/Payment";
 // Import FontAwesome pour les icons
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import Footer from "./components/Footer";
 // import Filtersoffers from "./pages/Filtersoffers";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 library.add(faMagnifyingGlass);
@@ -53,9 +54,11 @@ function App() {
         <Route path="/publish" element={token ? <Publish token={token} /> : <Signup />} />
         <Route path="/payment" element={<Payment />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }
 
 // On place le composant Header avant les <Routes> dans <Router> pour qu'il soit afficher sur chaque page
+// Même chose pour le Footer mais à la fin
 export default App;

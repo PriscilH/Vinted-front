@@ -628,3 +628,18 @@ textarea {
   color: #017580;
   font-weight: 600;
 }
+
+/* ---FOOTER--- */
+
+
+.Footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.Footer span {
+  font-weight: bold;
+}
