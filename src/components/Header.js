@@ -18,6 +18,7 @@ const Header = ({token, transferToken, priceMin, setPriceMin, title, setTitle}) 
       <input className="Searchbar"
         placeholder="Recherche des articles"
         type="text"
+        value={title}
         onChange={(event) => {
           setTitle(event.target.value);
         }}

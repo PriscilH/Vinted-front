@@ -2,10 +2,12 @@ import { Link } from "react-router-dom";
 import dechire from "../assets/dechire.svg"
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Home = ({ title, setTitle, priceMin, setPriceMin }) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
 
 useEffect(() => {
@@ -24,7 +26,7 @@ useEffect(() => {
         }
       }
         const response = await axios.get(
-          "https://lereacteur-vinted-api.herokuapp.com/offers" + filters
+          `https://lereacteur-vinted-api.herokuapp.com/offers${filters}`
         );
         // console.log(response.data);
         setData(response.data);
@@ -40,6 +42,17 @@ useEffect(() => {
     <div >
       <div className="Banner">
         <img className="Bannertorn" src={dechire} alt="effet déchiré" />
+        <div className="Banner-block">
+          <h1>Prêts à faire du tri dans vos placards ?</h1>
+          <button
+            onClick={(event) => {
+              event.preventDefault();
+              navigate("/publish");
+            }}
+          >
+            Vends maintenant
+          </button>
+        </div>
       </div>
       
       <h3>Fil d'actu</h3>
