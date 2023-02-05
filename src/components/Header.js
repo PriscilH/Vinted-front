@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { Slider } from "react-range";
 // import { useState } from "react";
 
-const Header = ({token, transferToken, priceMin, setPriceMin, title, setTitle}) => {
+const Header = ({token, transferToken, priceMin, setPriceMin, priceMax, setPriceMax, title, setTitle}) => {
 
   return (
     <div className="Header">
@@ -56,14 +56,14 @@ const Header = ({token, transferToken, priceMin, setPriceMin, title, setTitle}) 
           setPriceMin(event.target.value);
         }}
       />
-      {/* <p>Prix Max :</p>
+      <p>Prix Max :</p>
       <input className="PriceMax"
       // placeholder="Prix max"
         type="number"
         onChange={(event) => {
           setPriceMax(event.target.value);
         }}
-      /> */}
+      />
       </div>
       <div className="Trait"></div>
       <nav>

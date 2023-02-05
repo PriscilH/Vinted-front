@@ -36,8 +36,10 @@
 .Pricefilter p{
     color: #017580;
     font-weight: 700;
+    margin-left: 10px;
 }
-.PriceMin {
+
+.PriceMin, .PriceMax {
     border-radius: 5px;
     border: 2px solid #017580;
     width : 50px;

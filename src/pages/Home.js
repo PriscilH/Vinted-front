@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Home = ({ title, setTitle, priceMin, setPriceMin }) => {
+const Home = ({ title, setTitle, priceMin, setPriceMin, priceMax, setPriceMax }) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
@@ -25,13 +25,13 @@ useEffect(() => {
           filters = filters + "?priceMin=" + priceMin;
         }
       }
-      // if (priceMax) {
-      //   if (filters) {
-      //     filters = filters + "&priceMax=" + priceMax;
-      //   } else {
-      //     filters = filters + "?priceMax=" + priceMax;
-      //   }
-      // }
+      if (priceMax) {
+        if (filters) {
+          filters = filters + "&priceMax=" + priceMax;
+        } else {
+          filters = filters + "?priceMax=" + priceMax;
+        }
+      }
         const response = await axios.get(
           `https://lereacteur-vinted-api.herokuapp.com/offers${filters}`
         );
@@ -41,7 +41,7 @@ useEffect(() => {
     };
 
     fetchData();
-  }, [title, priceMin ]);
+  }, [title, priceMin, priceMax ]);
   return isLoading ? (
     <span>Loading ...</span>
   ) : (

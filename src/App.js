@@ -17,7 +17,6 @@ import Payment from "./pages/Payment";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import Footer from "./components/Footer";
-// import Filtersoffers from "./pages/Filtersoffers";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 library.add(faMagnifyingGlass);
 
@@ -25,6 +24,7 @@ function App() {
   const [token, setToken] = useState(Cookies.get("token") || null);
   const [title, setTitle] = useState("");
   const [priceMin, setPriceMin] = useState(0);
+  const [priceMax, setPriceMax] = useState(0);
 
   const transferToken = (token) => {
     if (token) {
@@ -45,9 +45,12 @@ function App() {
         setTitle={setTitle}
         priceMin={priceMin}
         setPriceMin={setPriceMin}
+        priceMax={priceMax}
+        setPriceMax={setPriceMax}
         /> 
       <Routes>
-        <Route path="/" element={<Home priceMin={priceMin} setPriceMin={setPriceMin} />} />
+        <Route path="/" element={<Home priceMin={priceMin} setPriceMin={setPriceMin} priceMax={priceMax}
+        setPriceMax={setPriceMax}/>} />
         <Route path="/signup" element={<Signup transferToken={transferToken} token={token}/>} />
         <Route path="/login" element={<Login transferToken={transferToken} token={token} />} />
         <Route path="/offer/:id" element={<Offer />} />
