@@ -25,6 +25,13 @@ useEffect(() => {
           filters = filters + "?priceMin=" + priceMin;
         }
       }
+      // if (priceMax) {
+      //   if (filters) {
+      //     filters = filters + "&priceMax=" + priceMax;
+      //   } else {
+      //     filters = filters + "?priceMax=" + priceMax;
+      //   }
+      // }
         const response = await axios.get(
           `https://lereacteur-vinted-api.herokuapp.com/offers${filters}`
         );
@@ -34,8 +41,7 @@ useEffect(() => {
     };
 
     fetchData();
-  }, [title, priceMin]);
-
+  }, [title, priceMin ]);
   return isLoading ? (
     <span>Loading ...</span>
   ) : (

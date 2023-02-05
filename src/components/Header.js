@@ -16,7 +16,7 @@ const Header = ({token, transferToken, priceMin, setPriceMin, title, setTitle}) 
       </Link>
       <div className="Glass"><FontAwesomeIcon   icon="fa-solid fa-magnifying-glass" />
       <input className="Searchbar"
-        placeholder="Recherche des articles"
+        placeholder="Rechercher des articles"
         type="text"
         value={title}
         onChange={(event) => {
@@ -56,6 +56,14 @@ const Header = ({token, transferToken, priceMin, setPriceMin, title, setTitle}) 
           setPriceMin(event.target.value);
         }}
       />
+      {/* <p>Prix Max :</p>
+      <input className="PriceMax"
+      // placeholder="Prix max"
+        type="number"
+        onChange={(event) => {
+          setPriceMax(event.target.value);
+        }}
+      /> */}
       </div>
       <div className="Trait"></div>
       <nav>
