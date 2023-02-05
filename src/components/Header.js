@@ -7,14 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { useState } from "react";
 
 const Header = ({token, transferToken, priceMin, setPriceMin, title, setTitle}) => {
-  // const navigate = useNavigate();
-
-  // const [search, setSearch] = useState("");
-  // const [priceMax, setPriceMax] = useState("");
-  // const [priceMin, setPriceMin] = useState("");
-
-  //   const handleChange = value => {
-  //       setPriceRange(value);}
 
   return (
     <div className="Header">
