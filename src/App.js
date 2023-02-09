@@ -50,7 +50,7 @@ function App() {
         /> 
       <Routes>
         <Route path="/" element={<Home priceMin={priceMin} setPriceMin={setPriceMin} priceMax={priceMax}
-        setPriceMax={setPriceMax}/>} />
+        setPriceMax={setPriceMax} title={title} setTitle={setTitle}/>} />
         <Route path="/signup" element={<Signup transferToken={transferToken} token={token}/>} />
         <Route path="/login" element={<Login transferToken={transferToken} token={token} />} />
         <Route path="/offer/:id" element={<Offer />} />

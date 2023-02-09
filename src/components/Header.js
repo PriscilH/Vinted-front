@@ -1,12 +1,16 @@
 import { Link } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
 import Logo from "../assets/logo.png";
 import Language from "./Language";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { Slider } from "react-range";
-// import { useState } from "react";
 
-const Header = ({token, transferToken, priceMin, setPriceMin, priceMax, setPriceMax, title, setTitle}) => {
+const Header = ({
+  token, 
+  transferToken, 
+  setPriceMin, 
+  setPriceMax, 
+  title,
+  setTitle,
+}) => {
 
   return (
     <div className="Header">
@@ -15,9 +19,12 @@ const Header = ({token, transferToken, priceMin, setPriceMin, priceMax, setPrice
       <img className="Logo" src={Logo} alt="Logo" />
       </Link>
       <div className="Glass"><FontAwesomeIcon   icon="fa-solid fa-magnifying-glass" />
-      <input className="Searchbar"
+      <input 
+        className="Searchbar"
         placeholder="Rechercher des articles"
         type="text"
+        name="title"
+        id="title"
         value={title}
         onChange={(event) => {
           setTitle(event.target.value);
@@ -74,11 +81,7 @@ const Header = ({token, transferToken, priceMin, setPriceMin, priceMax, setPrice
         <button> <span>Divertissements</span></button>
         <button> <span>Animaux</span></button>
         <button><span>A propos</span></button>
-        <button><span>Notre plateforme</span></button>
-       
-       
-        
-        
+        <button><span>Notre plateforme</span></button> 
       </nav>
     </div>
   );
