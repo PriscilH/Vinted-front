@@ -9,6 +9,36 @@
     padding: 15px;
 }
 
+.slidePrice{
+display: flex;
+justify-content: center;
+margin-bottom: 5px;
+margin-top: 5px;
+}
+
+.slidePrice, p{
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
+  font-weight: 500;
+}
+
+.price-thumb {
+  position: absolute;
+  background-color: #017580;
+  color: white;
+  border-radius: 5px;
+  bottom: 5px;
+  margin-left: 20px;
+  width: 40px;
+  height: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
 .Searchbar {
     width: 600px;
     height: 35px;
@@ -26,27 +56,7 @@
     color: #AFAFAF;
 }
 
-.Pricefilter {
-    display: flex;
-    margin-left: 100px;
-    width: 1500px;
-    font-size: 14px;
-}
 
-.Pricefilter p{
-    color: #017580;
-    font-weight: 700;
-    margin-left: 10px;
-}
-
-.PriceMin, .PriceMax {
-    border-radius: 5px;
-    border: 2px solid #017580;
-    width : 50px;
-    height: 20px;
-    margin-top: 10px;
-    margin-left: 5px;
-}
 
 .Connexion {
     display: flex;

@@ -56,7 +56,8 @@ const Header = ({
         <Language />
       </div>
       </div>
-      <div> 
+      <div className="slidePrice"> 
+      <p>Prix entre :</p>
       <Range
         step={1}
         min={0}
@@ -73,9 +74,9 @@ const Header = ({
               {...props}
               style={{
                 ...props.style,
-                height: "4px",
-                width: "200px",
-                backgroundColor: "#00b4d8",
+                height: "5px",
+                width: "400px",
+                backgroundColor: "#017580",
               }}
             >
               {children}
@@ -89,10 +90,10 @@ const Header = ({
               {...props}
               style={{
                 ...props.style,
-                height: "12px",
-                width: "12px",
+                height: "15px",
+                width: "15px",
                 borderRadius: "50%",
-                backgroundColor: "#00b4d8",
+                backgroundColor: "#017580",
                 display: "flex",
                 justifyContent: "center",
                 outline: "none",
