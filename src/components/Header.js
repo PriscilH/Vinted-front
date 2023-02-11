@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
+import { Range } from "react-range";
 import Language from "./Language";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header = ({
   token, 
-  transferToken, 
-  setPriceMin, 
-  setPriceMax, 
+  setToken,
+  transferToken,  
   title,
   setTitle,
+  slideRange,
+  setSlideRange,
 }) => {
 
   return (
@@ -54,8 +56,54 @@ const Header = ({
         <Language />
       </div>
       </div>
-      <div className="Pricefilter">
-      <p>Prix Min :</p>
+      <div> 
+      <Range
+        step={1}
+        min={0}
+        max={1000}
+        values={slideRange}
+        onChange={(values) => {
+          // console.log(values);
+          return setSlideRange(values);
+        }}
+        renderTrack={({ props, children }) => {
+          // console.log(children);
+          return (
+            <div
+              {...props}
+              style={{
+                ...props.style,
+                height: "4px",
+                width: "200px",
+                backgroundColor: "#00b4d8",
+              }}
+            >
+              {children}
+            </div>
+          );
+        }}
+        renderThumb={({ props }) => {
+          // console.log(props);
+          return (
+            <div
+              {...props}
+              style={{
+                ...props.style,
+                height: "12px",
+                width: "12px",
+                borderRadius: "50%",
+                backgroundColor: "#00b4d8",
+                display: "flex",
+                justifyContent: "center",
+                outline: "none",
+              }}
+            >
+              <p className="price-thumb">{slideRange[props.key] + " €"}</p>
+              </div>);
+        }}
+      />
+      </div>
+      {/* <p>Prix Min :</p>
       <input className="PriceMin"
       // placeholder="Prix min"
         type="number"
@@ -70,8 +118,8 @@ const Header = ({
         onChange={(event) => {
           setPriceMax(event.target.value);
         }}
-      />
-      </div>
+      /> */}
+      
       <div className="Trait"></div>
       <nav>
         <button><span>Femmes</span></button>

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Home = ({ title, priceMin, priceMax }) => {
+const Home = ({ title, slideRange }) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
@@ -16,22 +16,14 @@ useEffect(() => {
       if (title) {
         filters = filters + "?title=" + title;
       }
-      if (priceMin) {
-        if (filters) {
+      if (filters) {
           // si il y a déjà un filtre par title, donc filters n'est plus une string vide et contient déjà un `?`, il me faut donc un `&`
-          filters = filters + "&priceMin=" + priceMin;
+          filters = filters + "&priceMin=" + slideRange[0] + "&priceMax=" + slideRange[1];
         } else {
           // si il n'y a pas de filtre title, alors la variable filters est toujours vide, et donc il me faut un `?`
-          filters = filters + "?priceMin=" + priceMin;
+          filters = filters + "?priceMin=" + slideRange[0] + "&priceMax=" + slideRange[1];
         }
-      }
-      if (priceMax) {
-        if (filters) {
-          filters = filters + "&priceMax=" + priceMax;
-        } else {
-          filters = filters + "?priceMax=" + priceMax;
-        }
-      }
+  
         const response = await axios.get(
           `https://lereacteur-vinted-api.herokuapp.com/offers${filters}`
         );
@@ -41,7 +33,7 @@ useEffect(() => {
     };
 
     fetchData();
-  }, [title, priceMin, priceMax ]);
+  }, [title, slideRange ]);
   return isLoading ? (
     <span>Loading ...</span>
   ) : (

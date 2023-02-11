@@ -23,8 +23,7 @@ library.add(faMagnifyingGlass);
 function App() {
   const [token, setToken] = useState(Cookies.get("token") || null);
   const [title, setTitle] = useState("");
-  const [priceMin, setPriceMin] = useState(0);
-  const [priceMax, setPriceMax] = useState(0);
+  const [slideRange, setSlideRange] = useState([0, 100]);
 
   const transferToken = (token) => {
     if (token) {
@@ -44,14 +43,12 @@ function App() {
         transferToken={transferToken}
         title={title}
         setTitle={setTitle}
-        priceMin={priceMin}
-        setPriceMin={setPriceMin}
-        priceMax={priceMax}
-        setPriceMax={setPriceMax}
+        slideRange={slideRange}
+        setSlideRange={setSlideRange}
         /> 
       <Routes>
-        <Route path="/" element={<Home priceMin={priceMin} setPriceMin={setPriceMin} priceMax={priceMax}
-        setPriceMax={setPriceMax} title={title} setTitle={setTitle}/>} />
+        <Route path="/" element={<Home title={title} setTitle={setTitle} slideRange={slideRange}
+        setSlideRange={setSlideRange}/>} />
         <Route path="/signup" element={<Signup transferToken={transferToken} setToken={setToken}/>} />
         <Route path="/login" element={<Login transferToken={transferToken} setToken={setToken} />} />
         <Route path="/offer/:id" element={<Offer />} />
