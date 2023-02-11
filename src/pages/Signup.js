@@ -100,7 +100,7 @@ const Signup = ({transferToken}) => {
                     );
                     
                     const token = response.data.token;
-                    Cookies.set("token", token, { expires: 1 });
+                    Cookies.set("token", token, { expires: 5, sameSite: "strict"});
                     token ? setInfos(true) : <p>une erreur est survenue</p>;
                   } catch (error) {
                     console.log(error.message);

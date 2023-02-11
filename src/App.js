@@ -29,7 +29,7 @@ function App() {
   const transferToken = (token) => {
     if (token) {
       setToken(token);
-      Cookies.set("token", token, { expires: 1, sameSite: "strict" });
+      Cookies.set("token", token, { expires: 5, sameSite: "strict" });
     } else {
       setToken(null);
       Cookies.remove("token");
@@ -40,6 +40,7 @@ function App() {
     <Router>
       <Header 
         token={token}
+        setToken={setToken}
         transferToken={transferToken}
         title={title}
         setTitle={setTitle}
@@ -51,8 +52,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home priceMin={priceMin} setPriceMin={setPriceMin} priceMax={priceMax}
         setPriceMax={setPriceMax} title={title} setTitle={setTitle}/>} />
-        <Route path="/signup" element={<Signup transferToken={transferToken} token={token}/>} />
-        <Route path="/login" element={<Login transferToken={transferToken} token={token} />} />
+        <Route path="/signup" element={<Signup transferToken={transferToken} setToken={setToken}/>} />
+        <Route path="/login" element={<Login transferToken={transferToken} setToken={setToken} />} />
         <Route path="/offer/:id" element={<Offer />} />
         <Route path="/publish" element={token ? <Publish token={token} /> : <Signup />} />
         <Route path="/payment" element={<Payment />} />
