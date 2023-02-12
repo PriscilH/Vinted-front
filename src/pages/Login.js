@@ -54,7 +54,7 @@ const Login = ({ transferToken }) => {
                       try {
                         const response = await axios.post(
                           // "https://lereacteur-vinted-api.herokuapp.com/user/login"
-                          "https://site--backend-vinted--r85cyr9v9nmw.code.run",
+                          "https://site--backend-vinted--r85cyr9v9nmw.code.run/user/login",
                           {
                             email: email,
                             password: password,
@@ -90,7 +90,7 @@ const Login = ({ transferToken }) => {
             <p className="product-description">
               Vos identifiants sont incorrects, réessayez
             </p>
-            <button onClick={refreshPage}>Retry</button>
+            <button className="Retry" onClick={refreshPage}>Retry</button>
           </>
         )}
       </div>
