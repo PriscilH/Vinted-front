@@ -25,7 +25,8 @@ useEffect(() => {
         }
   
         const response = await axios.get(
-          `https://lereacteur-vinted-api.herokuapp.com/offers${filters}`
+          // `https://lereacteur-vinted-api.herokuapp.com/offers${filters}`
+          `https://site--backend-vinted--r85cyr9v9nmw.code.run/offers${filters}`
         );
         // console.log(response.data);
         setData(response.data);

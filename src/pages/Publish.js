@@ -42,7 +42,8 @@ const Publish = () => {
 
           try {
             const response = await axios.post(
-              "https://lereacteur-vinted-api.herokuapp.com/offer/publish",
+              // "https://lereacteur-vinted-api.herokuapp.com/offer/publish"
+              "https://site--backend-vinted--r85cyr9v9nmw.code.run/offer/publish",
               formData,
               {
                 headers: {
