@@ -85,8 +85,8 @@ const Signup = ({transferToken}) => {
               if (!username || !email || !password) {
                 alert(`Merci de compléter les informations manquantes`);
               } else {
-                const data = async (event) => {
-                  event.preventDefault();
+                const data = async () => {
+                  // event.preventDefault();
                   const formdata = new FormData();
                   formdata.append("username", username);
                   formdata.append("email", email);
