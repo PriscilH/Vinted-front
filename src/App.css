@@ -209,6 +209,18 @@ h3 {
     color: #171717;
 }
 
+.fil{
+  display:flex;
+  justify-content: flex-end;
+  margin-bottom: 80px;
+  margin-top: -80px;
+  margin-right: 80px;
+  color: #007782;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
 .offers-list {
     display: flex;
     justify-content: center;
@@ -696,14 +708,43 @@ textarea {
 
 
 .Footer {
-  display: flex;
-  justify-content: center;
   margin-top: 150px;
   margin-bottom: 20px;
   font-size: 15px;
+  border-top: 1px solid lightgray;
 }
 
-.Footer span {
+.Nav2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.Nav2 button:not(:first-child) {
+  margin-left: 20px;
+}
+
+.Nav2 button{
+  background-color: white;
+  border: none;
+  font-size: 14px;
+  line-height: 18px;
+  color: #757575;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.Nav2 button:hover{
+  cursor: pointer;
+}
+
+.Made{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Made span {
   font-weight: bold;
   margin: 5px;
 }

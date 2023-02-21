@@ -54,7 +54,7 @@ useEffect(() => {
         </div>
       </div>
       
-      <h3>Fil d'actu</h3>
+      <h3>Fil d'actu</h3><p className="fil">Voir plus</p>
       <div className="offers-list">
        
           {/* <Link to ="/offer">Aller vers la page offer</Link> */}
