@@ -748,3 +748,53 @@ textarea {
   font-weight: bold;
   margin: 5px;
 }
+
+/* Moins de 960px plus de boutons et de nav */
+
+
+/* pour les écrans dont la largeur est inférieure à 768px */
+@media (max-width: 767px) {
+  .Header {
+    /* display: flex; */
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Header nav {
+    margin-left: 30px;
+  }
+
+  .Logo {
+    margin: 0 auto;
+  }
+
+  .Searchbar {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 10px;
+  }
+
+  .Glass {
+    width: 80%;
+    margin-top: 10px;
+  }
+
+  .Buttons {
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .Connexion {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Banner-block {
+    margin-top: 150px;
+  }
+}
