@@ -755,7 +755,7 @@ textarea {
     padding-left: 20%;
     padding-top: 8%;
   }
-
+ 
   .Header .Logo {
     margin-bottom: 15px;
   }
@@ -766,6 +766,7 @@ textarea {
 
   .Glass {
    display: flex; 
+   max-width: 500px;
   }
 
   .Glass input, .Glass svg{
@@ -774,14 +775,20 @@ textarea {
   .Glass svg{
     padding: 10px;
   }
-
-  /* .Searchbar {
-   padding: 10%;
-  } */
   
-  /* .Header nav {
-    margin-left: 30px;
-  } */
+  .Header nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  nav > button {
+    margin-left: -20px;
+    /* flex: 1 2 20% ; */
+    flex: auto;
+  }
+
+ 
+ 
 
   /* .Logo {
     margin: 0 auto;
@@ -791,12 +798,12 @@ textarea {
   } */
 
 
-  .Buttons {
+  /* .Buttons {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-  }
+  } */
 
   
 
