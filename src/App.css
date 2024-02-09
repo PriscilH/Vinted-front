@@ -748,6 +748,63 @@ textarea {
 }
 
 /* MEDIA QUERIES */
+
+@media (max-width: 576px) {
+  
+  .Header {
+    padding-left: 20%;
+    padding-top: 8%;
+  }
+
+  .Header .Logo {
+    margin-bottom: 15px;
+  }
+  
+  .Header .Glass {
+    margin-bottom: 20px;
+  }
+
+  .Glass {
+   display: flex; 
+  }
+
+  .Glass input, .Glass svg{
+    margin-top: 5px;
+  }
+  .Glass svg{
+    padding: 10px;
+  }
+
+  /* .Searchbar {
+   padding: 10%;
+  } */
+  
+  /* .Header nav {
+    margin-left: 30px;
+  } */
+
+  /* .Logo {
+    margin: 0 auto;
+    
+    justify-content: center;
+    align-items: center;
+  } */
+
+
+  .Buttons {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  
+
+  .Banner-block {
+    margin-top: 150px;
+  }
+  
+}
 @media (max-width: 1300px) {
  
   .Header {
