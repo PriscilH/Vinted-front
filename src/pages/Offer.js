@@ -47,15 +47,15 @@ const Offer = () => {
               );
           })}
               <div className="offer-description">
-                <p>{offerDetails.product_name}</p>
-                <p>{offerDetails.product_description}</p>
+                <p>Nom du produit : {offerDetails.product_name}</p>
+                <p>Description : {offerDetails.product_description}</p>
                 <div>
                 {offerDetails.owner.account.avatar && (
                   <img 
                   src={offerDetails.owner.account.avatar.secure_url}
                   alt="Vendeur du vêtement"/>
                   )}
-                  <p>{offerDetails.owner.account.username}</p> 
+                  <p>Vendeur : {offerDetails.owner.account.username}</p> 
                 </div>
                 <Link to="/payment" 
                 state={{ title: offerDetails.product_name, price: offerDetails.product_price,

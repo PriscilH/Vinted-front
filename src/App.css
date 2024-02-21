@@ -815,6 +815,31 @@ textarea {
     margin-bottom: 40px;
   }  
 
+  main {
+    flex-direction: column;
+    /* align-items: center; */
+  }
+
+  .offer-image {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .offer-details {
+    width: 100%;
+    align-items: center;
+  }
+
+  .details-line p:last-child {
+    margin-bottom: 0;
+  }
+
+  .offer-description button {
+    width: 50%;
+    margin-left: 160px;
+  }
 }
 
 
