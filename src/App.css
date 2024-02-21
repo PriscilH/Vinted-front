@@ -749,69 +749,75 @@ textarea {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 576px) {
-  
-  .Header {
-    padding-left: 20%;
-    padding-top: 8%;
-  }
- 
-  .Header .Logo {
-    margin-bottom: 15px;
-  }
-  
-  .Header .Glass {
-    margin-bottom: 20px;
-  }
+@media screen and (max-width: 768px) {
 
-  .Glass {
-   display: flex; 
-   max-width: 500px;
-  }
-
-  .Glass input, .Glass svg{
-    margin-top: 5px;
-  }
-  .Glass svg{
+  .Logo, .Buttons {
     padding: 10px;
   }
-  
-  .Header nav {
-    display: flex;
-    flex-wrap: wrap;
+
+  .Header nav > button {
+  visibility: hidden;
   }
 
-  nav > button {
-    margin-left: -20px;
-    /* flex: 1 2 20% ; */
-    flex: auto;
+  h3 {
+    margin-left: 20px;
   }
 
- 
- 
-
-  /* .Logo {
-    margin: 0 auto;
-    
-    justify-content: center;
-    align-items: center;
-  } */
-
-
-  /* .Buttons {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .fil {
+    margin-left: auto;
+    margin-right: 20px;
+    margin-top: 0;
     margin-bottom: 20px;
-  } */
+  }
 
-  
+  .offers-list {
+    margin-left: 20px;
+  }
+
+  .offer {
+    width: 100%;
+  }
+
+  .offer > img {
+    width: 100%;
+    height: auto;
+  }
+
+  .Bannertorn, .Trait {
+    visibility: hidden;
+  }
+
+  .Price {
+    margin-bottom: 0;
+  }
+
+  .offer-description {
+    margin-top: 20px;
+  }
+
+  .offer-description button {
+    width: 100%;
+  }
+
+  .Banner {
+    padding: 20px;
+    text-align: center;
+  }
 
   .Banner-block {
-    margin-top: 150px;
+    align-items: center;
+    max-width: 250px;
+    margin-left: -50px;
   }
-  
+
+  .Banner-block button{
+    width: 200px;
+    margin-bottom: 40px;
+  }  
+
 }
+
+
 @media (max-width: 1300px) {
  
   .Header {
