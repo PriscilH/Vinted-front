@@ -762,6 +762,8 @@ textarea {
 
 @media screen and (max-width: 768px) {
 
+/* Header */
+
   .Glass {
     padding-left: 5px;
   }
@@ -775,9 +777,20 @@ textarea {
     padding: 10px;
   }
 
-  .Header nav > button {
+  .inscrip {
+  margin-left: 20px;
+  }
+
+  .Header nav > button, .Langues, .Aide {
   visibility: hidden;
   }
+
+  .slidePrice {
+    margin-top: -30px;
+    margin-bottom: -80px;
+  }
+
+/* -------------------------- */
 
   h3 {
     margin-left: 20px;
