@@ -1,3 +1,7 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 /* ---HEADER--- */
 
 .Logo {
@@ -777,16 +781,16 @@ textarea {
     padding: 10px;
   }
 
-  .inscrip {
-  margin-left: 20px;
-  }
-
-  .Header nav > button, .Langues, .Aide {
+  .Header nav > button, .Langues, .Aide, .Sell {
   visibility: hidden;
   }
 
+  .Buttons{
+    margin-left: 18%;
+  }
+
   .slidePrice {
-    margin-top: -30px;
+    margin-top: -40px;
     margin-bottom: -80px;
   }
 
