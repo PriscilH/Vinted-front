@@ -50,11 +50,23 @@ margin-top: 5px;
   }
 
 .Glass {
-    background-color: #f5f6f7;
-    margin-bottom: 15px;
-    padding-left: 10px;
-    color: #AFAFAF;
+  display: flex;
+  align-items: center;
+  background-color: #f5f6f7;
+  border-radius: 5px;
+  padding-left: 10px;
+  margin-bottom: 15px;
 }
+
+.Glass input {
+  flex: 1;
+  margin-left: 10px;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 16px;
+}
+/* ---fin test-- */
 
 .Connexion {
     display: flex;
@@ -751,6 +763,15 @@ textarea {
 
 @media screen and (max-width: 768px) {
 
+  .Glass {
+    padding-left: 5px;
+  }
+
+  .Glass input {
+    height: 50%;
+    margin-top: 10px;
+  }
+
   .Logo, .Buttons {
     padding: 10px;
   }
@@ -817,7 +838,6 @@ textarea {
 
   main {
     flex-direction: column;
-    /* align-items: center; */
   }
 
   .offer-image {
