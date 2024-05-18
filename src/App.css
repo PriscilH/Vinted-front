@@ -791,6 +791,20 @@ textarea {
     margin-bottom: -80px;
   }
 
+  .Bannertorn, .Trait {
+    visibility: hidden;
+  }
+
+  .Banner-block {
+    align-items: center;
+    max-width: 250px;
+    margin-left: -50px;
+  }
+
+  .Banner-block button{
+    width: 200px;
+    margin-bottom: 40px;
+  }
 --------------------------
  
   h3 {
@@ -804,25 +818,18 @@ textarea {
     margin-bottom: 20px;
   }
 
-  .offers-list {
-    margin-left: 20px;
-  }
-
   .offer {
     width: 100%;
+    margin-left: 20%;
+  }
+
+  .username {
+    margin-right: 50%;
   }
 
   .offer > img {
-    width: 100%;
+    width: 50%;
     height: auto;
-  }
-
-  .Bannertorn, .Trait {
-    visibility: hidden;
-  }
-
-  .Price {
-    margin-bottom: 0;
   }
 
   .offer-description {
@@ -831,17 +838,6 @@ textarea {
 
   .offer-description button {
     width: 100%;
-  }
-
-  .Banner-block {
-    align-items: center;
-    max-width: 250px;
-    margin-left: -50px;
-  }
-
-  .Banner-block button{
-    width: 200px;
-    margin-bottom: 40px;
   }  
 
   main {
@@ -882,10 +878,10 @@ textarea {
     margin-left: 30px;
   }
 
-  .Logo {
-    margin: 0 auto;
+  .Logo, .Buttons {
+    padding: 10px;
   }
-
+  
   .Searchbar {
     width: 100%;
     max-width: 350px;
