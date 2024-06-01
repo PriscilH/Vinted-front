@@ -2,15 +2,85 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+html, body{
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
 /* ---HEADER--- */
+
+.Header {
+    padding: 15px;
+}
+
+.Connexion {
+    display: flex;
+    justify-content: space-between;
+}
 
 .Logo {
     width: 120px;
     margin-left: 100px;
 }
 
-.Header {
-    padding: 15px;
+.Glass {
+  display: flex;
+  align-items: center;
+  background-color: #f5f6f7;
+  border-radius: 5px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+.Glass input {
+  flex: 1;
+  margin-left: 10px;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.Searchbar {
+  width: 600px;
+  height: 35px;
+  background-color: #f5f6f7;
+  border: none;
+  padding-left: 20px;
+  font-size: 18px;
+  outline: none;
+}
+
+
+.Buttons button{
+  padding: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.inscrip {
+   border-top-left-radius: 5px;
+   border-top-right-radius: 0px;
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 0px;
+   background-color: #fff;
+   color: #017580;
+   border: 1px solid #017580;
+}
+
+.connect {
+   border-top-left-radius: 0px;
+   border-top-right-radius: 5px;
+   border-bottom-left-radius: 0px;
+   border-bottom-right-radius: 5px;
+   background-color: #fff;
+   color: #017580;
+   border: 1px solid #017580;
+} 
+
+.Redbutton {
+background-color: lightcoral;
+border-radius: 5px;
+border: none;
 }
 
 .slidePrice{
@@ -41,71 +111,6 @@ margin-top: 5px;
   justify-content: center;
   align-items: center;
   font-size: 12px;
-}
-
-.Searchbar {
-    width: 600px;
-    height: 35px;
-    background-color: #f5f6f7;
-    border: none;
-    padding-left: 20px;
-    font-size: 18px;
-    outline: none;
-  }
-
-.Glass {
-  display: flex;
-  align-items: center;
-  background-color: #f5f6f7;
-  border-radius: 5px;
-  padding-left: 10px;
-  margin-bottom: 15px;
-}
-
-.Glass input {
-  flex: 1;
-  margin-left: 10px;
-  border: none;
-  background: none;
-  outline: none;
-  font-size: 16px;
-}
-
-.Connexion {
-    display: flex;
-    justify-content: space-between;
-}
-
-.Buttons button{
-   padding: 5px;
-   font-size: 14px;
-   cursor: pointer;
-}
-
-.inscrip {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 0px;
-    background-color: #fff;
-    color: #017580;
-    border: 1px solid #017580;
-}
-
-.connect {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 5px;
-    background-color: #fff;
-    color: #017580;
-    border: 1px solid #017580;
-} 
-
-.Redbutton {
-background-color: lightcoral;
-border-radius: 5px;
-border: none;
 }
 
 .Sell{
@@ -772,6 +777,70 @@ textarea {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /* @media only screen and (min-width: 1200px) {...} */
+@media only screen and (max-width: 500px) {
+
+  .Connexion{
+    margin-bottom: -40px;
+  }
+  
+  .Logo{
+    margin-right: 100px;
+  }
+
+  .Buttons .inscrip{
+    margin-left: 60px;
+  }
+
+  .Searchbar{
+    width: 250px;
+  }
+
+  nav{
+    margin-bottom: -30%;
+  }
+
+  .Banner{
+    width: 100%;
+    height: 300px;
+    padding-top: 125px;
+  }
+
+  .Banner-block{
+    height: 38vw;
+    width: 350px;
+    top: 39%;
+    left: 30%;
+  }
+
+  h1{
+    font-size: 22px;
+    margin-top: -15px;
+  }
+
+  .Banner-block button{
+    font-size: small;
+    font-weight: 600;
+    margin-right: 50px;
+    margin-top: 8px;
+  }
+
+  .Nav2{
+    visibility: hidden;
+    margin-bottom: -30px;
+  }
+  
+  h3{
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+  }
+
+  .offers-list{
+    margin-right: 50px;
+    margin-top: 30px;
+  }
+
+}
 
 @media screen and (max-width: 768px) {
 
@@ -796,10 +865,6 @@ textarea {
 
   .Header nav > button, .Langues, .Aide, .Sell {
   visibility: hidden;
-  }
-
-  .Buttons{
-    margin-left: 18%;
   }
 
   .slidePrice {
@@ -836,15 +901,10 @@ textarea {
 
   .offer {
     width: 100%;
-    margin-left: 20%;
-  }
-
-  .username {
-    margin-right: 50%;
+    
   }
 
   .offer > img {
-    width: 50%;
     height: auto;
   }
 
@@ -928,7 +988,7 @@ textarea {
   }
 
   .Banner-block {
-    margin-top: 150px;
+    margin-top: 130px;
   }
   
 }

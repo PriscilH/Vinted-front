@@ -39,7 +39,7 @@ const Home = ({ title, slideRange }) => {
   return isLoading ? (
     <span>Loading ...</span>
   ) : (
-    <div>
+    <div className="ContainBox">
       <div className="Banner">
         <img className="Bannertorn" src={dechire} alt="effet déchiré" />
         <div className="Banner-block">
