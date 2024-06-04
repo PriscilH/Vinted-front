@@ -840,6 +840,18 @@ textarea {
     margin-top: 30px;
   }
 
+  /* Signup */
+
+  .input-text, .input-text2{
+    width: 300px;
+    margin-left: 15px;
+  }
+
+  .Signupbutton{
+    width: 150px;
+    margin-left: 95px;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
