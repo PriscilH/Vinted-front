@@ -852,6 +852,45 @@ textarea {
     margin-left: 95px;
   }
 
+  /* Login */
+
+  .Logbutton{
+    width: 150px;
+    margin-left: 95px;
+  }
+  
+  /* Offer */
+
+  .buy button{
+    font-size: 12px;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+
+  /* Payment */
+
+  .Payment{
+    height: 60vh;
+    padding-top: 5px;
+  }
+
+  .Blockpay{
+    width: 350px;
+    padding: 15px;
+  }
+
+  .Payprice{
+    padding: 5px;
+    margin-top: -10px;
+  }
+
+  .Buttonvalid{
+    width: 200px;
+    margin-left: 60px;
+  }
+
+  
+
 }
 
 @media screen and (max-width: 768px) {

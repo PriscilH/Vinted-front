@@ -60,7 +60,9 @@ const Offer = () => {
                 <Link to="/payment" 
                 state={{ title: offerDetails.product_name, price: offerDetails.product_price,
                 username: offerDetails.owner.account.username, }}>
-                <button>Acheter</button></Link>
+                <div className="buy">
+                <button>Acheter</button>
+                </div></Link>
               </div>
             
         </div>
