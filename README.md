@@ -59,4 +59,4 @@ L’objectif est de permettre aux utilisateurs de consulter, publier et acheter 
     # ou
      yarn start
     ```
-4. **L’application sera accessible sur http://localhost:3000**
+
